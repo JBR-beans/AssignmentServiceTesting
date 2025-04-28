@@ -18,7 +18,6 @@ public class AssignmentService
 
     public List<Assignment> ListIncomplete()
     {
-        // TODO: Return only assignments where IsCompleted is false
-        throw new NotImplementedException();
+		return assignments.Where(a => !a.IsCompleted).ToList();
     }
 }
